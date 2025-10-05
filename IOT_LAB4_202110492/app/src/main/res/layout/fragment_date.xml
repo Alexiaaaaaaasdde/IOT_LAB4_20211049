@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#79D1F3">
+
+    <TextView
+        android:id="@+id/tvTitleDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pronóstico Futuro"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"
+        android:padding="8dp"
+        android:background="#1D3557" />
+
+    <!-- inputs mínimos por ahora (luego los conectamos a la API) -->
+    <EditText
+        android:id="@+id/etIdLocationDate"
+        android:hint="idLocación"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp" />
+
+    <EditText
+        android:id="@+id/etFechaInteres"
+        android:hint="día de Interés (YYYY-MM-DD)"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp" />
+
+    <Button
+        android:id="@+id/btnBuscarDate"
+        android:text="Buscar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/tvPlaceholder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="(Aquí aparecerán los resultados)"
+        android:layout_marginTop="12dp"/>
+</LinearLayout>

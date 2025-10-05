@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#79D1F3">
+
+    <!-- Título -->
+    <TextView
+        android:id="@+id/tvTitleFore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pronósticos del Clima"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"
+        android:padding="8dp"
+        android:background="#1D3557" />
+
+    <!-- Barra de inputs como en la figura -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp">
+
+        <EditText
+            android:id="@+id/etIdLoc"
+            android:hint="idLocation"
+            android:inputType="number"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:background="@android:drawable/edit_text" />
+
+        <EditText
+            android:id="@+id/etDays"
+            android:hint="#días Forecast"
+            android:inputType="number"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="6dp"
+            android:padding="10dp"
+            android:background="@android:drawable/edit_text" />
+
+        <Button
+            android:id="@+id/btnBuscarFore"
+            android:text="Buscar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp" />
+    </LinearLayout>
+
+    <!-- Lista de 14 días -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvForecast"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="8dp"/>
+</LinearLayout>
