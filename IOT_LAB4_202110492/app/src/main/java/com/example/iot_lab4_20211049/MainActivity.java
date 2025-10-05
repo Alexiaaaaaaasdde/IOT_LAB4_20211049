@@ -23,14 +23,12 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-        // ⚠️ activity_main.xml debe tener android:id="@+id/main" en la vista raíz
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
 
-        // Botón "Ingresar" -> valida Internet -> entra a AppActivity
         Button btn = findViewById(R.id.btnIngresar);
         if (btn != null) {
             btn.setOnClickListener(v -> {
@@ -48,8 +46,7 @@ public class MainActivity extends AppCompatActivity {
             });
         }
     }
-
-    // ✅ Chequeo de conectividad (WiFi/Datos/Ethernet)
+    
     private boolean isConnected() {
         ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
         if (cm == null) return false;

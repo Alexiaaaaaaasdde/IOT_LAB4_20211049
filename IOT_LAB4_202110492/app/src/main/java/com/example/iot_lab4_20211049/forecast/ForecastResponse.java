@@ -5,10 +5,9 @@ import java.util.List;
 
 public class ForecastResponse {
 
-    public Location location;     // info del lugar (opcional para lo que usamos)
-    public Forecast forecast;     // bloque con days -> hours
+    public Location location;
+    public Forecast forecast;
 
-    // ---- objetos raíz ----
     public static class Location {
         public String name;
         public String region;
@@ -22,7 +21,6 @@ public class ForecastResponse {
         public List<ForecastDay> forecastday;
     }
 
-    // ---- día ----
     public static class ForecastDay {
         public String date;
         @SerializedName("date_epoch") public long dateEpoch;
@@ -31,7 +29,7 @@ public class ForecastResponse {
         public List<Hour> hour;
     }
 
-    // Datos agregados/diarios (para tu lista de 14 días)
+    // Datos agregados/diarios
     public static class Day {
         @SerializedName("maxtemp_c") public double maxtempC;
         @SerializedName("mintemp_c") public double mintempC;
@@ -56,13 +54,12 @@ public class ForecastResponse {
 
     public static class Condition {
         public String text;
-        public String icon;   // viene con //cdn..., le agregamos https: en el adapter
+        public String icon;
         public int code;
     }
 
-    // ---- hora a hora (lo que te falta) ----
     public static class Hour {
-        public String time;               // "YYYY-MM-DD HH:00"
+        public String time;
         @SerializedName("temp_c") public double temp_c;
         public int humidity;
 
@@ -71,7 +68,6 @@ public class ForecastResponse {
 
         public Condition condition;
 
-        // algunos extras útiles (opcional)
         @SerializedName("wind_kph") public double wind_kph;
         @SerializedName("feelslike_c") public double feelslike_c;
         public int is_day;

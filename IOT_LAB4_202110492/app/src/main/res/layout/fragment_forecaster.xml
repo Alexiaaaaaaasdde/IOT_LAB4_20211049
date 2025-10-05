@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     android:background="#79D1F3">
 
-    <!-- Título -->
     <TextView
         android:id="@+id/tvTitleFore"
         android:layout_width="match_parent"
@@ -18,7 +17,6 @@
         android:padding="8dp"
         android:background="#1D3557" />
 
-    <!-- Barra de inputs como en la figura -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

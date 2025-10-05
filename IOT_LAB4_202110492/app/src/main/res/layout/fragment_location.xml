@@ -4,9 +4,8 @@
     android:padding="12dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#79D1F3">   <!-- opcional: celeste del ejemplo -->
+    android:background="#79D1F3">
 
-    <!-- TÍTULO -->
     <TextView
         android:id="@+id/tvTitleLoc"
         android:layout_width="match_parent"
