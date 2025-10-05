@@ -3,11 +3,10 @@
     android:orientation="horizontal"
     android:padding="10dp"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@android:color/transparent">
+    android:layout_height="wrap_content">
 
     <ImageView
-        android:id="@+id/ivIcon"
+        android:id="@+id/ivIconH"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginEnd="10dp"
@@ -20,29 +19,34 @@
         android:layout_weight="1">
 
         <TextView
-            android:id="@+id/tvDate"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:id="@+id/tvTime"
             android:textStyle="bold"
-            android:text="Fecha: 2025-10-05" />
-
-        <TextView
-            android:id="@+id/tvCond"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Condición: Sunny" />
+            android:text="2026-06-02 14:00" />
 
         <TextView
-            android:id="@+id/tvRange"
+            android:id="@+id/tvCondH"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Máx: 27.2°C   |   Mín: 15.8°C" />
+            android:text="Condición" />
 
         <TextView
-            android:id="@+id/tvFooter"
+            android:id="@+id/tvMetrics"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Location: Cusco, Cusco  |  ID: 1794357" />
+            android:text="Temp/Humedad" />
+
+        <TextView
+            android:id="@+id/tvExtra"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lluvia/Viento" />
+
+        <TextView
+            android:id="@+id/tvFooterH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lugar | ID" />
     </LinearLayout>
-
 </LinearLayout>

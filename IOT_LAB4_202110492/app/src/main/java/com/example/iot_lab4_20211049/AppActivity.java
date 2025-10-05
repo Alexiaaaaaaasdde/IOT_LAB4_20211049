@@ -2,22 +2,32 @@ package com.example.iot_lab4_20211049;
 
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
 
 public class AppActivity extends AppCompatActivity {
-    @Override protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    @Override
+    protected void onCreate(Bundle b) {
+        super.onCreate(b);
         setContentView(R.layout.activity_app);
 
-        replaceRoot(new LocationFragment());
 
-        findViewById(R.id.btnFuture).setOnClickListener(v -> replaceRoot(new DateFragment()));
-        findViewById(R.id.btnLocation).setOnClickListener(v -> replaceRoot(new LocationFragment()));
-        findViewById(R.id.btnForecaster).setOnClickListener(v -> replaceRoot(new ForecasterFragment()));
-        findViewById(R.id.btnFuture).setOnClickListener(v -> replaceRoot(new LocationFragment())); // placeholder
+        if (b == null) {
+            replaceRoot(new LocationFragment());
+        }
+
+        findViewById(R.id.btnLocation).setOnClickListener(v ->
+                replaceRoot(new LocationFragment())
+        );
+
+        findViewById(R.id.btnForecaster).setOnClickListener(v ->
+                replaceRoot(new ForecasterFragment())
+        );
+
+        findViewById(R.id.btnFuture).setOnClickListener(v ->
+                replaceRoot(new DateFragment())
+        );
     }
 
-    private void replaceRoot(Fragment f) {
+    private void replaceRoot(androidx.fragment.app.Fragment f){
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.nav_host_container, f)
                 .commit();

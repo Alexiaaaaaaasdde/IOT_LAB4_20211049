@@ -1,25 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#79D1F3">
 
     <FrameLayout
         android:id="@+id/nav_host_container"
-        android:layout_width="match_parent" android:layout_height="0dp"
-        android:layout_weight="1" />
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottomBar" />
 
+    <!-- Barra inferior con los 3 botones -->
     <LinearLayout
-        android:layout_width="match_parent" android:layout_height="wrap_content"
-        android:orientation="horizontal" android:padding="8dp">
-        <Button android:id="@+id/btnLocation"  android:text="Location"
-            android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"/>
-        <Button android:id="@+id/btnForecaster" android:text="Forecaster"
-            android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"/>
+        android:id="@+id/bottomBar"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:padding="12dp"
+        android:gravity="center"
+        android:background="#0A1A4F"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnLocation"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Locations"
+            android:backgroundTint="#6E4CC2"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"/>
+
+        <Space
+            android:layout_width="8dp"
+            android:layout_height="1dp"/>
+
+        <Button
+            android:id="@+id/btnForecaster"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Pronóstico"
+            android:backgroundTint="#6E4CC2"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"/>
+
+        <Space
+            android:layout_width="8dp"
+            android:layout_height="1dp"/>
 
         <Button
             android:id="@+id/btnFuture"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Future" />
+            android:layout_height="wrap_content"
+            android:text="Futuro"
+            android:backgroundTint="#6E4CC2"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"/>
     </LinearLayout>
-</LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
