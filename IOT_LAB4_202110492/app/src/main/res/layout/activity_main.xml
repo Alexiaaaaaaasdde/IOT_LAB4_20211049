@@ -15,14 +15,23 @@
             android:layout_width="wrap_content" android:layout_height="wrap_content"/>
 
         <ImageView
-            android:layout_width="200dp" android:layout_height="120dp"
-            android:src="@android:drawable/ic_menu_compass"
-            android:layout_marginTop="16dp"/>
+            android:layout_width="200dp"
+            android:layout_height="120dp"
+            android:src="@drawable/peru_clima"
+            android:contentDescription="@string/app_name"
+            android:layout_marginTop="16dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop" />
 
         <ImageView
-            android:layout_width="200dp" android:layout_height="120dp"
-            android:src="@android:drawable/ic_menu_gallery"
-            android:layout_marginTop="8dp"/>
+            android:layout_width="200dp"
+            android:layout_height="120dp"
+            android:src="@drawable/ic_menu_gallery"
+            android:contentDescription="@string/app_name"
+            android:layout_marginTop="8dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop" />
+
 
         <Button
             android:id="@+id/btnIngresar"
